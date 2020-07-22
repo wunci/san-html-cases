@@ -1,5 +1,5 @@
 // data binding name auto camel case
-var san = require('../../..');
+var san = require('san');
 var Label = san.defineComponent({
     template: '<a><span title="{{dataTitle}}">{{dataText}}</span></a>'
 });

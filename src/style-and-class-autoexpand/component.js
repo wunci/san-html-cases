@@ -1,5 +1,5 @@
 // class and style auto expand
-var san = require('../../..');
+var san = require('san');
 
 var Label = san.defineComponent({
     components: {

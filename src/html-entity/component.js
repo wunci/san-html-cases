@@ -1,5 +1,5 @@
 
-var san = require('../../..');
+var san = require('san');
 
 
 var entityStr = '&#39;&#x00021;&emsp;&ensp;&thinsp;&copy;&lt;p&gt;&reg;&lt;/p&gt;&reg;&zwnj;&zwj;&lt;&nbsp;&gt;&quot;';

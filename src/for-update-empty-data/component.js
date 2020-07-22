@@ -1,5 +1,5 @@
 // update for, init with empty data
-var san = require('../../..');
+var san = require('san');
 var MyComponent = san.defineComponent({
     template: '<ul>'
         + '<li>name - email</li>'

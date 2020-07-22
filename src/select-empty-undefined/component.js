@@ -1,5 +1,5 @@
 // select, null and undefined should select empty option, init undefined
-var san = require('../../..');
+var san = require('san');
 
 var MyComponent = san.defineComponent({
     template: '<div>'

@@ -1,5 +1,5 @@
 // render component with san-if, init true, update soon
-var san = require('../../..');
+var san = require('san');
 var TelList = san.defineComponent({
     template: '<ul><li san-for="item in list" title="{{item}}">{{item}}</li></ul>'
 });

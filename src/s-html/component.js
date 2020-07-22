@@ -1,5 +1,5 @@
 // bool attr
-var san = require('../../..');
+var san = require('san');
 var MyComponent = san.defineComponent({
     template: '<div>'
         + '<b s-html="html">asdfsa<u>dfa</u>sdfsa</b>'

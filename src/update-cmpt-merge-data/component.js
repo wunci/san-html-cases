@@ -1,5 +1,5 @@
 // update component, merge init data and given data
-var san = require('../../..');
+var san = require('san');
 var Label = san.defineComponent({
     template: '<span class="label" title="{{title}}">{{text}}</span>',
 

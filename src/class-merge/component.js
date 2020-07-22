@@ -1,4 +1,4 @@
-var san = require('../../..');
+var san = require('san');
 var Child = san.defineComponent({
     template: '<b class="{{clazz}}">{{text}}</b>'
 });

@@ -1,5 +1,5 @@
 
-var san = require('../../..');
+var san = require('san');
 
 var U = san.defineComponent({
     template: '<u>{{foo}}</u>',

@@ -1,5 +1,5 @@
 // component with fragment root el
-var san = require('../../..');
+var san = require('san');
 var Child = san.defineComponent({
     template: '<fragment>see <a href="{{link}}">{{linkText || name}}</a> to start <b>{{name}}</b> framework</fragment>'
 });

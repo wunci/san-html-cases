@@ -1,5 +1,5 @@
 // update if, init with false
-var san = require('../../..');
+var san = require('san');
 var MyComponent = san.defineComponent({
     template: '<u>'
         + '<a>nimei</a>'

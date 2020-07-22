@@ -1,4 +1,4 @@
-var san = require('../../..');
+var san = require('san');
 
 var LI = san.defineComponent({
     template: '<li><b><slot/></b></li>'

@@ -1,5 +1,5 @@
 
-var san = require('../../..');
+var san = require('san');
 
 var Folder = san.defineComponent({
     template: '<div><h3 on-click="toggle"><slot name="title"/></h3><slot s-if="!hidden" s-for="i in repeat"/></div>',

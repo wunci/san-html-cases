@@ -1,5 +1,5 @@
 // checkbox checked
-var san = require('../../..');
+var san = require('san');
 var MyComponent = san.defineComponent({
     template: '<div>'
         + '<b title="{{online}}">{{online}}</b>'

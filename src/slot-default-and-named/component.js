@@ -1,5 +1,5 @@
 // default and named slot
-var san = require('../../..');
+var san = require('san');
 var Tab = san.defineComponent({
     template: '<div>'
         +   '<div class="head"><slot name="title"></slot></div>'

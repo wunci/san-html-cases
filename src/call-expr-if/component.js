@@ -1,4 +1,4 @@
-var san = require('../../..');
+var san = require('san');
 var MyComponent = san.defineComponent({
     template: '<div><u s-if="isWorking(time)">work</u><b s-else>rest</b></div>',
 

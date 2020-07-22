@@ -1,4 +1,4 @@
-var san = require('../../..');
+var san = require('san');
 
 var Label = san.defineComponent({
     template: '<u>{{text}}</u>'

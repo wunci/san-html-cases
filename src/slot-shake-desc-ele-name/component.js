@@ -1,5 +1,5 @@
 
-var san = require('../../..');
+var san = require('san');
 
 var Table = san.defineComponent({
     template: ''

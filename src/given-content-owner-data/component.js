@@ -1,5 +1,5 @@
 
-var san = require('../../..');
+var san = require('san');
 
 var Man = san.defineComponent({
     template: '<div><slot name="test" var-n="data.name" var-email="data.email" var-sex="data.sex ? \'male\' : \'female\'"><p>{{n}},{{sex}},{{email}}</p></slot></div>'
