@@ -12,7 +12,7 @@ var MyComponent = san.defineComponent({
 
     initData: function () {
         return {
-            date: new Date(1983, 8, 3)
+            date: new Date('1983-09-02T16:00:00.000Z')
         };
     }
 });

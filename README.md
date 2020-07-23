@@ -8,15 +8,22 @@
 2. [san-ssr][san-ssr] 中的 e2e case 使用本仓库提供的 component 和 HTML。
 3. [san-ssr-target-php][san-ssr-target-php] 中的 e2e case 使用本仓库提供的 component 和 HTML。
 
-## 开发指南
+## 目录结构
 
-1. spec.js 一个用途是跑 san e2e 测试。因此
-    - spec 中的注释标记（比如 `// inject`）不可删除。
-    - spec 只是代码片段不能直接跑，不要尝试给本仓库添加 Lint 或 Test。
-2. data 优先使用 JSON 格式并命名为 data.json，利用了 JS 特性的（比如 `Date`）使用 date.js 格式。
-3. component.ts 用来维护 TypeScript 样例，它们是静态分析的。因此
+src 下每个目录表示一个测试样例，每个测试样例包含如下文件：
+
+- spec.js 是 san e2e 测试的代码片段，因此不要尝试 Lint。
+- data.json 是 SSR 使用的数据，为可移植尽量使用 json，其他情况（比如 `Date`）使用 date.js、date.php。
+- component.js 是组件源代码，SSR 和反解公用。
+- component.ts 用来维护 TypeScript 样例，SSR 尤其是 san-ssr-target-php 使用。它是静态分析的，因此有更多要求：
     - template 必须是 String Literal 或 NoSubstitutionTemplateLiteral。
-    - 组件内 Date 功能为 [Ts2Php][ts2php] Date 支持的子集，比如构造函数只接受数字。
+    - 宿主 API 受限，比如 Date API 是 [Ts2Php][ts2php] Date 定义的功能子集。
+
+## 特殊标记
+
+- spec.js 中的注释标记（比如 `// inject`）用来生成 e2e 测试代码，不可删除。
+- -ndo 命名的 case 表示渲染参数 noDataOutput 为 true。
+- -so 命名的 case 表示编译参数 ssrOnly 为 true。
 
 [san]: https://github.com/baidu/san
 [san-ssr]: https://github.com/baidu/san-ssr
