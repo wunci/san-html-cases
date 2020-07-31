@@ -2,4 +2,5 @@
 *.php
 !component.js
 !data.js
+!spec.js
 !data.php
