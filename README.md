@@ -27,5 +27,5 @@ src 下每个目录表示一个测试样例，每个测试样例包含如下文�
 
 [san]: https://github.com/baidu/san
 [san-ssr]: https://github.com/baidu/san-ssr
-[san-ssr-target-php]: https://github.com/baidu/san-ssr-target-php
+[san-ssr-target-php]: https://github.com/searchfe/san-ssr-target-php
 [ts2php]: https://github.com/searchfe/ts2php
