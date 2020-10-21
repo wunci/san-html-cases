@@ -1,20 +1,15 @@
 const san = require('san')
 
-const Label = san.defineComponent({
-    template: '<b>{{text}}</b>'
-})
+var Label = san.defineComponent({
+    template: '<span title="{{text}}">{{text}}<i>{{tip}}</i></span>'
+});
 
-let loadSuccess
-const MyComponent = san.defineComponent({
-    template: '<div><span>not label</span><x-label text="{{text}}"/></div>',
+var MyComponent = san.defineComponent({
+    components: {
+        'x-label': Label
+    },
 
-    getComponentType: (aNode) => aNode.tagName === 'x-label' ? Label : undefined,
-
-    attached: function () {
-        this.nextTick(function () {
-            loadSuccess(Label)
-        })
-    }
-})
+    template: '<div><b text="{{name}}" tip="{{company}}" s-is="\'x-\' + cmpt"></b></div>'
+});
 
 exports = module.exports = MyComponent
