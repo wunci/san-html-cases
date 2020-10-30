@@ -17,5 +17,8 @@
   "homepage": "https://github.com/ecomfe/san-html-cases#readme",
   "peerDependencies": {
     "san": "^3.10.0"
+  },
+  "devDependencies": {
+    "san": "^3.9.5"
   }
 }

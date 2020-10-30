@@ -1,6 +1,6 @@
 var san = require('san');
 var List = san.defineComponent({
-    template: '<ul><li s-for="item in list">{{item}}</li></ul>'
+    template: '<ul><li s-for="item,i in list">{{i+1}}. {{item}}</li></ul>'
 });
 
 var MyComponent = san.defineComponent({

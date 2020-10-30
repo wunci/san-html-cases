@@ -1,7 +1,7 @@
 import { Component } from 'san'
 
 class List extends Component {
-    static template = '<ul><li s-for="item in list">{{item}}</li></ul>'
+    static template = '<ul><li s-for="item,i in list">{{i+1}}. {{item}}</li></ul>'
 }
 
 export default class MyComponent extends Component {
