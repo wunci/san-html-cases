@@ -1,6 +1,6 @@
 const san = require('san')
 
-const MyComponent = san.defineComponent({
+var MyComponent = san.defineComponent({
     realTitle () {
         const foo = {
             prefix: 'real',
