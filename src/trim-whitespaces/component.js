@@ -5,6 +5,7 @@ MyComponent.trimWhitespace = 'blank'
 MyComponent.template = `
     <div>
         <a>Foo</a> <span>bar</span>
+        {{ interpText | raw }}
     </div>
 `
 
