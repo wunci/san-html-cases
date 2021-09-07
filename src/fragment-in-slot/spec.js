@@ -1,4 +1,4 @@
-it("fragment elements", function (done) {
+it("fragment in slot", function (done) {
     // [inject] init
 
     var container = wrap.getElementsByClassName('container')[0];

@@ -1,11 +1,11 @@
 const san = require('san')
 
-let container = san.defineComponent({
+let Container = san.defineComponent({
     template: `<p>Hello<slot/>!</p>`
 })
-let MyApp = san.defineComponent({
-    components: { 'my-component': container },
+let MyComponent = san.defineComponent({
+    components: { 'my-component': Container },
     template: `<my-component>aaa{{name}}<span></span></my-component>`
 })
 
-exports = module.exports = MyApp
+exports = module.exports = MyComponent
