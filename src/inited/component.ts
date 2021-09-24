@@ -13,6 +13,9 @@ export default class MyComponent extends Component {
     }
     static computed = {
         realTitle: function () {
+            return 'real1'
+        },
+        fakeTitle: function () {
             return this.data.get('_realTitle')
         }
     }
