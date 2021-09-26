@@ -9,7 +9,12 @@ var MyComponent = san.defineComponent({
     components: {
         'x-a': Article
     },
-    template: '<div><x-a s-bind="article" title="{{title}}"/><a s-bind="aProps" target="{{target}}">link</a></div>'
+    template: `<div>
+        <x-a s-bind="article" title="{{title}}"/>
+        <x-a s-bind="article123" title="{{title}}"/>
+        <a s-bind="aProps" target="{{target}}">link</a>
+        <a s-bind="aProps123" target="{{target}}">link</a>
+    </div>`
 });
 
 exports = module.exports = MyComponent;
