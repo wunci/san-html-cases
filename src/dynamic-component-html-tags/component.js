@@ -11,6 +11,7 @@ var MyComponent = san.defineComponent({
     template: `<span>
         <aaa s-is="cmpt">{{text}}</aaa>
         <aaa s-is="isDiv ? 'div' : 'p'">{{text}}</aaa>
+        <aaa s-is="isDiv ? 'div' : 'button'"><div s-if="false">should not show</div></aaa>
     </span>`
 });
 
