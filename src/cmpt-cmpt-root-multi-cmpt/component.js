@@ -13,7 +13,7 @@ var MidCmpt = san.defineComponent({
         'x-u': XU,
         'x-b': XB
     },
-    template: '<x-u s-if="num">{{num}}</x-u><x-b s-else>{{num}}</x-b>'
+    template: '<x-u s-if="num"><div><span>{{num}}</span></div></x-u><x-b s-else><div>{{num}}</div></x-b>'
 });
 
 var MyComponent = san.defineComponent({
@@ -22,5 +22,6 @@ var MyComponent = san.defineComponent({
     },
     template: '<div><x-m num="{{num}}" /></div>'
 });
+
 
 exports = module.exports = MyComponent;
