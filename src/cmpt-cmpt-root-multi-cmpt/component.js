@@ -1,19 +1,19 @@
 var san = require('san');
 
-var XU = san.defineComponent({
-    template: '<u><slot/></u>'
+var XP = san.defineComponent({
+    template: '<p><slot/></p>'
 });
 
-var XB = san.defineComponent({
-    template: '<b><slot/></b>'
+var XA = san.defineComponent({
+    template: '<a><slot/></a>'
 });
 
 var MidCmpt = san.defineComponent({
     components: {
-        'x-u': XU,
-        'x-b': XB
+        'x-p': XP,
+        'x-a': XA
     },
-    template: '<x-u s-if="num"><div><span>{{num}}</span></div></x-u><x-b s-else><div>{{num}}</div></x-b>'
+    template: '<x-p s-if="num"><b><span>{{num}}</span></b></x-p><x-a s-else><b>{{num}}</b></x-a>'
 });
 
 var MyComponent = san.defineComponent({
