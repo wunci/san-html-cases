@@ -1,17 +1,20 @@
 it("fragment in slot", function (done) {
     // [inject] init
 
-    var container = wrap.getElementsByClassName('container')[0];
-    expect(container.children[0].innerHTML).toContain('1');
-    expect(container.children[1].innerHTML).toContain('2');
-    expect(container.children.length).toBe(2);
+    var container = wrap.getElementsByTagName('a')[0];
+    var bs = wrap.getElementsByTagName('b');
+    expect(bs[0].innerHTML).toContain('1');
+    expect(bs[1].innerHTML).toContain('2');
+    expect(bs[0].parentNode).toBe(container);
+    expect(bs[1].parentNode).toBe(container);
 
     myComponent.data.set('lists', [2, 1]);
 
     myComponent.nextTick(function () {
-        expect(container.children[0].innerHTML).toContain('2');
-        expect(container.children[1].innerHTML).toContain('1');
-        expect(container.children.length).toBe(2);
+        expect(bs[0].innerHTML).toContain('2');
+        expect(bs[1].innerHTML).toContain('1');
+        expect(bs[0].parentNode).toBe(container);
+        expect(bs[1].parentNode).toBe(container);
 
         myComponent.dispose();
         document.body.removeChild(wrap);

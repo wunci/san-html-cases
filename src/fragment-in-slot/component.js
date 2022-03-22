@@ -1,24 +1,20 @@
 const san = require('san')
-let Container = san.defineComponent({
-    template: `
-        <div class="container">
-            <slot/>
-        </div>
-    `
+var Container = san.defineComponent({
+    template: '<a class="container">'
+        + '<slot/>'
+    + '</a>'
 })
-let MyComponent = san.defineComponent({
+var MyComponent = san.defineComponent({
     components: { container: Container },
-    template: `
-        <div>
-            <container>
-                <fragment s-for="item in lists">
-                    <div s-if="item === 1">{{item}}</div>
-                    <div s-if="item === 2">{{item}}</div>
-                </fragment>
-            </container>
-        </div>
-    `,
-    initData() {
+    template: '<div>'
+        + '<container>'
+        +   '<fragment s-for="item in lists">'
+        +   '<b s-if="item === 1">{{item}}</b>'
+        +   '<b s-if="item === 2">{{item}}</b>'
+        +   '</fragment>'
+        + '</container>'
+        + '</div>',
+    initData: function() {
         return {
             lists: [1, 2]
         }
