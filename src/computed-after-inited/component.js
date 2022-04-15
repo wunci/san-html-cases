@@ -2,7 +2,7 @@
 var san = require('san');
 
 var MyComponent = san.defineComponent({
-    inited () {
+    inited: function () {
         this.data.set('title', '2');
     },
     computed: {
