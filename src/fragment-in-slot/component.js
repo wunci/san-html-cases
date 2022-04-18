@@ -6,13 +6,13 @@ var Container = san.defineComponent({
 })
 var MyComponent = san.defineComponent({
     components: { container: Container },
-    template: '<div>'
-        + '<container>'
-        +   '<fragment s-for="item in lists">'
-        +   '<b s-if="item === 1">{{item}}</b>'
-        +   '<b s-if="item === 2">{{item}}</b>'
-        +   '</fragment>'
-        + '</container>'
+    template:'<div>'
+        + '  <container>'
+        + '    <fragment s-for="item in lists">'
+        + '      <b s-if="item === 1">{{item}}</b>'
+        + '      <b s-if="item === 2">{{item}}</b>'
+        + '    </fragment>'
+        + '  </container>'
         + '</div>',
     initData: function() {
         return {
