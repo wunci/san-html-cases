@@ -1,5 +1,5 @@
 const san = require('san')
-const MyComponent = san.defineComponent({
+var MyComponent = san.defineComponent({
     template: '<template><span>foo</span></template>'
 })
 

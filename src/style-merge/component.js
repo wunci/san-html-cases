@@ -1,9 +1,9 @@
 const san = require('san')
-const Child = san.defineComponent({
+var Child = san.defineComponent({
     template: '<b style="width: 1rem">{{text}}</b>'
 })
 
-const MyComponent = san.defineComponent({
+var MyComponent = san.defineComponent({
     template: '<div><x-child style="{{style}}" s-ref="child"/></div>',
     components: {
         'x-child': Child
