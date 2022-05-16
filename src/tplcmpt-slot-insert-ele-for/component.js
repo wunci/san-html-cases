@@ -3,7 +3,7 @@ var san = require('san');
 
 
 var Folder = san.defineTemplateComponent({
-    template: '<div><h3 on-click="toggle"><slot name="title"/></h3><slot/></div>'
+    template: '<div><h3><slot name="title"/></h3><slot/></div>'
 });
 
 var MyComponent = san.defineComponent({
