@@ -1,5 +1,5 @@
-it("component client-render", function (done) {
-    var wr = document.getElementById('cmpt-ssr-client-render');
+it("component client-render component as root", function (done) {
+    var wr = document.getElementById('cmpt-ssr-client-render-cmptasroot');
     expect(wr.getElementsByTagName('i').length).toBe(0);
     expect(wr.getElementsByTagName('u').length).toBe(1);
     expect(wr.getElementsByTagName('span').length).toBe(1);
@@ -15,6 +15,10 @@ it("component client-render", function (done) {
     expect(uEl.innerHTML).toBe('erik');
     expect(spans[1].getAttribute('title')).toBe('erik');
     expect(spans[0].getAttribute('title')).toBe('erik');
+
+    expect(myComponent.children.length).toBe(2);
+    expect(myComponent.children[0] instanceof ULabel).toBeTruthy();
+    expect(myComponent.children[1] instanceof ILabelWrap).toBeTruthy();
 
 
     myComponent.data.set('name', 'errorrik');
