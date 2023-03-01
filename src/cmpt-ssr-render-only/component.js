@@ -1,15 +1,15 @@
 var san = require('san');
 
+var SubChild = san.defineComponent({
+    template: '<i>{{text}}</i>',
+    ssr: 'render-hydrate'
+});
+
 var Child = san.defineComponent({
     components: {
         'ui-sub': SubChild
     },
     template: '<p><ui-sub text="{{dt}}"/></p>'
-});
-
-var SubChild = san.defineComponent({
-    template: '<i>{{text}}</i>',
-    ssr: 'render-hydrate'
 });
 
 var ULabel = san.defineComponent({
