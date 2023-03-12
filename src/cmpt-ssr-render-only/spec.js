@@ -5,8 +5,8 @@ it("component render-only", function (done) {
         {el: wrap.firstChild}
     );
 
-    expect(myComponents['ui-u']).toBe(1);
-    expect(myComponents['ui-c/ui-sub']).toBe(1);
+    expect(myComponents['ui-u'].length).toBe(1);
+    expect(myComponents['ui-c/ui-sub'].length).toBe(1);
     var iCmpt = myComponents['ui-c/ui-sub'][0];
     var uCmpt = myComponents['ui-u'][0];
 
@@ -20,7 +20,7 @@ it("component render-only", function (done) {
 
 
     iCmpt.data.set('text', 'errorrik');
-    myComponent.nextTick(function () {
+    iCmpt.nextTick(function () {
         expect(iCmpt.el.innerHTML).toContain('errorrik');
 
         iCmpt.dispose();
