@@ -5,7 +5,7 @@ it("component render-only cmpt and if as root, false", function (done) {
         {el: wrap.firstChild}
     );
 
-    expect(myComponents['ui-c/ui-sub'].length).toBe(0);
+    expect(myComponents['ui-c/ui-sub']).toBeUndefined();
     expect(myComponents['ui-u'].length).toBe(1);
     var uCmpt = myComponents['ui-u'][0];
 
@@ -16,7 +16,7 @@ it("component render-only cmpt and if as root, false", function (done) {
 
     uCmpt.data.set('text', 'nothing');
     uCmpt.nextTick(function () {
-        expect(iCmpt.el.innerHTML).toContain('nothing');
+        expect(uCmpt.el.innerHTML).toContain('nothing');
 
         uCmpt.dispose();
         document.body.removeChild(wrap);
