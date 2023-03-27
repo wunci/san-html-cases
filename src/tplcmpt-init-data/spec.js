@@ -1,4 +1,4 @@
-it("template component basic", function (done) {
+it("template component basic, with initData", function (done) {
     // [inject] init
 
     var as = wrap.getElementsByTagName('a');

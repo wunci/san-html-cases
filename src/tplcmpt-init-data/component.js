@@ -1,7 +1,7 @@
 var san = require('san');
 
 var Child = san.defineTemplateComponent({
-    initData() {
+    initData: function() {
         return {
             user: 'tom'
         };
