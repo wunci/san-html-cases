@@ -1,9 +1,11 @@
 it("component render-only, components members is plain object", function (done) {
     var wrap = document.getElementById('cmpt-ssr-render-only-objcmpt');
-    var myComponents = san.hydrateComponent(
+    var hydrateResult = san.hydrateComponent(
         MyComponent,
         {el: wrap.firstChild}
     );
+    expect(hydrateResult.renderOnly).toBeTruthy();
+    var myComponents = hydrateResult.components;
 
     expect(myComponents['ui-u'].length).toBe(1);
     expect(myComponents['ui-c/ui-sub'].length).toBe(1);

@@ -1,9 +1,11 @@
 it("component render-only-slot2", function (done) {
     var wrap = document.getElementById('cmpt-ssr-render-only-slot2');
-    var myComponents = san.hydrateComponent(
+    var hydrateResult = san.hydrateComponent(
         MyComponent,
         {el: wrap.firstChild}
     );
+    expect(hydrateResult.renderOnly).toBeTruthy();
+    var myComponents = hydrateResult.components;
 
     expect(myComponents['ui-u'].length).toBe(1);
     expect(myComponents['ui-c'].length).toBe(1);

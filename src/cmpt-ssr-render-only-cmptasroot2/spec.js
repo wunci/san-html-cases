@@ -1,9 +1,11 @@
 it("component render-only-cmptasroot2", function (done) {
     var wrap = document.getElementById('cmpt-ssr-render-only-cmptasroot2');
-    var myComponents = san.hydrateComponent(
+    var hydrateResult = san.hydrateComponent(
         MyComponent,
         {el: wrap.firstChild}
     );
+    expect(hydrateResult.renderOnly).toBeTruthy();
+    var myComponents = hydrateResult.components;
 
     expect(myComponents['ui-c'].length).toBe(1);
     var iCmpt = myComponents['ui-c'][0];
