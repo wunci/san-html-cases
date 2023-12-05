@@ -2,7 +2,8 @@ it("Component Attribute Inherit disable", function (done) {
     // [inject] init
 
     var innerComponent = myComponent.ref('inner');
-    expect(innerComponent.data.get('$attrs')).toBeUndefined();
+    expect(innerComponent.data.get('$attrs').title).toContain('Hahaha');
+    expect(innerComponent.data.get('$attrs')['data-t']).toContain('state:Hahaha');
 
     var span = wrap.getElementsByTagName('span')[0];
     expect(span.innerHTML).toContain('Hahaha');

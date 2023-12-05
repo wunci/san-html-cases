@@ -5,6 +5,7 @@ it("Component Attribute Inherit bool value and bool attr", function (done) {
     var btn = wrap.getElementsByTagName('button')[0];
     expect(btn.getAttribute('title')).toBe('Hahaha');
     expect(btn.disabled).toBeTruthy();
+    expect(btn.getAttribute('data-d')).toBe('');
     expect(btn.getAttribute('data-disabled')).toBe('true');
 
     myComponent.data.set('ed', 'false');

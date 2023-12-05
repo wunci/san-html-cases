@@ -1,11 +1,12 @@
 var san = require('san');
 
 var Inner = san.defineComponent({
-    template: '<button><slot/></button>'
+    template: '<p><span s-bind="$attrs"><slot/></span></p>',
+    inheritAttrs: false
 });
 
 var MyComponent = san.defineComponent({
-    template: '<div><ui-inner attr-title="{{text}}" attr-disabled attr-data-d attr-data-disabled="{{ed}}">{{text}}</ui-inner></div>',
+    template: '<div><ui-inner attr-title="{{text}}" attr-data-t="state:{{text}}">{{text}}</ui-inner></div>',
 
     components: {
         'ui-inner': Inner
