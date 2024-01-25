@@ -1,7 +1,7 @@
 var san = require('san');
 
 var Inner = san.defineComponent({
-    template: '<span title="nothing"><slot/></span>'
+    template: '<span title="nothing" data-other="inner"><slot/></span>'
 });
 
 var MyComponent = san.defineComponent({
