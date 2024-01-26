@@ -5,6 +5,7 @@ it("Component Attribute Inherit precedence", function (done) {
     expect(span.innerHTML).toContain('Hahaha');
     expect(span.getAttribute('title')).toBe('nothing');
     expect(span.getAttribute('data-t')).toBe('state:Hahaha');
+    expect(span.getAttribute('data-other')).toBe('inner');
 
     myComponent.data.set('text', 'Wuwuwu');
 
